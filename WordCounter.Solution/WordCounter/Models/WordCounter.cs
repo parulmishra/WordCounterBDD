@@ -23,14 +23,16 @@ namespace WordCounter.Models
 		}
 		public int CountRepeats()
 		{
-			List<int> occurences = new List<int>();
-			int pos = 0;
-			while ((pos < _sentence.Length) && (pos = _sentence.IndexOf(_word, pos)) != -1)
+			var words = _sentence.Split(new char[] {' ', '.', ','});
+			int count = 0;
+			foreach(var word in words)
 			{
-				occurences.Add(pos);
-				pos = pos + _word.Length;
+				if(_word.Equals(word))
+				{
+					count++;
+				}
 			}
-			return occurences.Count;
+			return count;
 		}
 	}
 }
