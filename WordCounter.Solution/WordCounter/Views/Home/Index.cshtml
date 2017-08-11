@@ -14,12 +14,27 @@
 			<label for="word">Please Enter the Sentence</label>
 			<input id="sentence" name="sentence" type="text" />
 		</div>
-		<button id="submit"type="submit" class="btn btn-primary btn-lg">Generate Count</button>
+		<button id="submit" type="submit" class="btn btn-primary btn-lg">Generate Count</button>
 	</form>
 	<div id = "result">
 		@if(Model != null)
 		{
-			<h3>Your Count is : @Model.CountRepeats()</h3>
+			if((@Model.GetSentence() == "") && (@Model.GetWord() == ""))
+			{
+				<h3>Please enter a word and a sentence</h3>
+			}
+			else if(@Model.GetWord() == "")
+			{
+				<h3>Please enter a Word</h3>
+			}
+			else if(@Model.GetSentence() == "")
+			{
+				<h3>Please enter a Sentence</h3>
+			}
+			else
+			{
+				<h3>Your Count is : @Model.CountRepeats()</h3>
+			}
 		}
 	</div>
 </div>
