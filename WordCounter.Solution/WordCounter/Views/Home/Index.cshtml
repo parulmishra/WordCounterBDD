@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+<div class="jumbotron">
+	<div class= "well">
+		<h1> Welcome to the Word Counter</h1>
+	</div>
+	<form action="/count" method = "post">
+		<div class="form-group">
+			<label for="word">Please Enter the Word</label>
+			<input id="word" name="word" type="text" />
+		</div>
+		<div class="form-group">
+			<label for="word">Please Enter the Sentence</label>
+			<input id="sentence" name="sentence" type="text" />
+		</div>
+		<button type="submit" class="btn btn-primary btn-lg">Generate Count</button>
+	</form>
+	<div id = "result">
+		@if(Model != null)
+		{
+			<h3>Your Count is : @Model.CountRepeats()</h3>
+		}
+	</div>
+</div>
