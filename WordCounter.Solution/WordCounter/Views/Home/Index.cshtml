@@ -1,7 +1,7 @@
 @{
   Layout = "_Layout";
 }
-<div class="jumbotron">
+<div class="jumbotron" id="maindiv">
 	<div class= "well">
 		<h1> Welcome to the Word Counter</h1>
 	</div>
@@ -14,7 +14,7 @@
 			<label for="word">Please Enter the Sentence</label>
 			<input id="sentence" name="sentence" type="text" />
 		</div>
-		<button type="submit" class="btn btn-primary btn-lg">Generate Count</button>
+		<button id="submit"type="submit" class="btn btn-primary btn-lg">Generate Count</button>
 	</form>
 	<div id = "result">
 		@if(Model != null)
