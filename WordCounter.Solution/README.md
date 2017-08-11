@@ -1,6 +1,6 @@
 # _Word Counter_
 
-#### _Scrabble 08.11.17_
+#### _Word Counter 08.11.17_
 
 #### By _**Parul Mishra Dubedy**_
 
